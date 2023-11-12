@@ -25,7 +25,7 @@
 
     <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
     <link href="/dist/output.css" rel="stylesheet" />
-
+    <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
     <title>Burger Website</title>
   </head>
   <body>
@@ -36,8 +36,7 @@
           <a> Bur<span class="text-secondaryColor">ger</span> </a>
         </div>
         <div
-          class="hidden absolute top-0 left-0 bg-primaryColor w-full py-16 border-b border-secondaryColor
-                 md:block md:border-none md:static md:ml-auto md:py-0 md:w-fit"
+          class="hidden absolute top-0 left-0 bg-primaryColor w-full py-16 border-b border-secondaryColor md:block md:border-none md:static md:ml-auto md:py-0 md:w-fit"
           id="nav-menu"
         >
           <ul class="flex flex-col items-center gap-5 md:flex-row">
@@ -77,12 +76,15 @@
               >
             </li>
           </ul>
-          <div class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden" id="nav-close">
-            <i class="ri-close-line hover:bg-red-700 ease-in duration-200 "></i>
+          <div
+            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden"
+            id="nav-close"
+          >
+            <i class="ri-close-line hover:bg-red-700 ease-in duration-200"></i>
           </div>
         </div>
-        <div class="flex items-center gap-5 ">
-          <i class="ri-moon-line text-xl ml-4 cursor-pointer "></i>
+        <div class="flex items-center gap-5">
+          <i class="ri-moon-line text-xl ml-4 cursor-pointer"></i>
           <div id="hamburger" class="md:hidden">
             <i class="ri-menu-2-line text-xl cursor-pointer"></i>
           </div>
@@ -91,7 +93,44 @@
     </header>
     <main>
       <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
-
+      <section id="home">
+        <div class="container flex flex-col items-center gap-10 md:flex-row">
+            <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
+              <img src="img/home-image.png" alt="" class="w-60 md:w-full" />
+            </div>
+            <div class="text-center md:text-left  md:basis-1/2 lg:basis-3/5">
+              <h1 class="home__title">HAPPY TUMMY WITH TASTY BURGERS.</h1>
+              <div class="separtor mx-auto md:mx-0"></div>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit quis odit assumenda minima labore. Odio molestiae
+                distinctio fugiat quam nisi, eum, nihil maiores iure corporis
+                tenetur quis saepe voluptate provident?
+              </p>
+              <div class="text-base flex items-center justify-center gap-4 py-10 md:justify-start md:gap-20">
+                <div class="text-center">
+                  <i class="fa-solid fa-utensils text-secondaryColor text-4xl"></i>
+                  <br />
+                  Delicious
+                </div>
+  
+                <div class="text-center">
+                  <i class="fa-solid fa-droplet text-secondaryColor text-4xl"></i>
+                  <br />
+                  Fresh
+                </div> 
+  
+                <div class="text-center">
+                  <i class="fa-brands fa-envira text-secondaryColor text-4xl"></i>
+                  <br />
+                  Organic
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary">learn more</a>
+            </div>
+        </div>
+      </section>
+      
       <!--~~~~~~~~~~~~~~~ Category ~~~~~~~~~~~~~~~-->
 
       <!--~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~-->
